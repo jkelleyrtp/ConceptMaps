@@ -1,4 +1,4 @@
-base_url = "https://zola-hyde.netlify.com"
+base_url = "http://jonathan-kelley.com/ConceptMaps/topics/"
 compile_sass = true
 title = "Discrete Concept Map"
 description = "Concepts, explanations, and knowledge for Discrete Mathematics"
