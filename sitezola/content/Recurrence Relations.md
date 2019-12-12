@@ -1,0 +1,82 @@
++++
+title = "Recurrence Relations"
+date = 2019-12-12
++++
+
+
+Created: Oct 28, 2019 12:05 PM
+Name: Richard Gao
+Required?: No
+Status: Completed
+Topic: Advanced Counting
+
+# Question:
+
+Suppose that there are animals waiting in a single file line at a watering hole on a plain in Tanzania. Suppose the line contains baboons, zebras, and elephants. Each baboon takes up one foot; each zebra takes up two feet; and each elephant takes up three feet.
+
+Find a recurrence relation and appropriate initial conditions to determine the number of ways an unlimited supply of these animals can fill an **n foot long line.
+
+Please also include the first 8 terms, using computational power if you wish.
+
+# Answer:
+
+Let a_n denote the number of ways to arrange the animals in a line of length n feet.
+
+To fill in an n **foot long line, you can either:
+
+1. Fill the first n - 1 feet and then add in a baboon at the end. There are a_n-1 ways to do this.
+2. Fill the first n - 2 feet and then add a zebra at the end. There are a_n-2 ways to do this.
+3. Fill the first n - 3 feet and then add a elephant at the end. There are a_n-3 ways to do this.
+
+Using the sum rule, we arrive at:
+
+$$a_n = a_{n-1} + a_{n-2} + a_{n-3}, \ n\geq4, a_1=1, a_2=3,a_3=9$$
+
+The initial conditions are as such because with a:
+
+- 1 foot line, there can be a baboon →1 way
+- 2 feet line, there can be baboon1, baboon2 or baboon2, baboon1, or zebra →3 ways
+- 3 feet line, there can be 3! ways to have a line of just baboons, 2! ways to have a line of one baboon and one zebra, and 1! ways to have a lone of a single elephant. Adding this up we arrive at 9 ways.
+
+The first 8 terms are then:
+
+$$a_1=1,\a_2=3,\a_3=9,\a_4=13,\a_5=25,\a_6=47,\a_7=85,\a_8=157$$
+
+### Remark:
+
+For some time I was stuck thinking about how if we were to add a baboon to the end of a_n-1, how will we account to the sequence where a baboon starts and then a_n-1 follows. However, I came to the realization that through the recurrence relation, this and similar cases are taken care of through the mutually and exhaustive cases of a_n-2 and a_n-3.
+
+# Question:
+
+When you and your friends were planning a safari in Tanzania, you knew that you would be in country for n days and that your days would be classified as jeep safari days, walking safari days (watch out for the lions!), beach days, and hot air balloon days. You had a strong preference to never have three (or more) hot air balloon days in a row, as your stomach and wallet need to rest. How many trip plans are possible?
+
+To answer this question, determine a recurrence relation and initial conditions for d_n = the number of ways you can organize your n day trip (where each day is classified according to the four types of days described above) while ensuring that you never have three (or more) hot air balloon days in a row. Please clearly and logically explain your work. Please include the first 8 terms, using computational power to iterate through your RR if you please.
+
+# Answer:
+
+Let d_n denote the number of ways to plan a trip with n days that do not have 3 or more consecutive hot air balloon days in a row.
+
+The first three initial conditions are:
+
+- d_1 = 4
+    - Any trip plan of length 1 does not have 3 consecutive hot air balloon days
+- d_2 = 4^2 = 16
+    - Any trip plan of length 1 does not have 3 consecutive hot air balloon days. Using permutations with repetition rules, we see that there are 4 choices for the first day and 4 choices for the second day, resulting in 4^2 trip plans
+- d_3 = 4^3 - 1 = 63
+    - Using the permutations with repetition rules, we see there are 4^3 trip plans. But we don't want to count the one trip with (hot air balloon, hot air balloon, hot air balloon) so we subtract by 1
+
+To count all day plans of length n that satisfy the condition of not having 3 consecutive hot air balloon days, let's define some variable X that represents any element of the set {J, W, B} (jeep safari days, walking safari days, beach days respectively). Notice X does not contain H (hot air balloon days).
+
+We now look at the *Mutually Exclusive and Exhaustive* cases where the trips start with X, start with HX, and start with HHX. Counting all such cases covers all possible ways to start a trip that does not have 3 or more consecutive hot air balloon days:
+
+- If a trip starts with X, this does not affect whether or not the trip has 3 consecutive hot air balloon days. There are then n-1 remaining slots to fill such that they do not contain 3 consecutive hot air balloon days. Therefore, there are d_n-1 possible ways to plan the rest of the trip.
+- If a trip starts with HX, this does not affect whether or not the trip has 3 consecutive hot air balloon days. There are then n-2 remaining slots to fill such that they do not contain 3 consecutive hot air balloon days. Therefore, there are d_n-2 possible ways to plan the rest of the trip.
+- If a trip starts with HHX, this does not affect whether or not the trip has 3 consecutive hot air balloon days. There are then n-2 remaining slots to fill such that they do not contain 3 consecutive hot air balloon days. Therefore, there are d_n-3 possible ways to plan the rest of the trip.
+
+However, before adding up these mutually exclusive and exhaustive cases to arrive at our recurrence relation we realize that because X is a placeholder variable of a set with three elements, we must multiply each of the cases by 3, as there are 3 instances of each case: one for J, one for W, and one for B. Our RR is then:
+
+$$d_n=3d_{n-1}+3d_{n-2}+3d_{n-3}, \ n\ge4, d_1=4,d_2=16,d_3=63$$
+
+The first 8 terms are then:
+
+$$a_1=4,\a_2=16,\a_3=63,\a_4=249,\a_5=984,\a_6=3888,\a_7=15363,\a_8=60705$$

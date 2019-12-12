@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Discrete Concept Map</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+
+      <!-- CSS File -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+      <!-- JS Fle -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+      
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+          console.log("Loaded!");
+          var maths = document.getElementsByClassName("language-math");
+          for (var i=0; i<maths.length; i++) {
+              var el = maths[i];
+              katex.render(el.innerText, el);
+              console.log("rendering math...");
+          }
+        });
+      </script>
+
+
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="https:&#x2F;&#x2F;zola-hyde.netlify.com"><h1>Discrete Concept Map</h1></a>
+                            
+                            <p class="lead">Concepts, explanations, and knowledge for Discrete Mathematics</p>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Induction on Graphs</h1>
+  <span class="post-date">2019-12-12</span>
+  <p>Created: Oct 31, 2019 10:57 AM
+Deadline: Nov 07, 2019
+Name: Richard Gao
+Required?: No
+Status: Completed
+Topic: Sets and Functions</p>
+<h1 id="question">Question:</h1>
+<p>Prove by induction on the number of edges that for any simple (not necessarily connected)
+graph, G, the sum of the degrees of all of G’s vertices is equal to twice the number of edges in
+G.</p>
+<p>If you prefer mathier notation, what follows is a restatement of the problem. Let G be a simple
+(not necessarily connected) graph on the vertex set V and the edge set E, with |E| = n. Prove by induction on n that:</p>
+<p>$$\sum_{v\in V}deg(v) = 2n$$</p>
+<h1 id="answer">Answer:</h1>
+<p>P(n) is the proposition that &quot;Given a graph G with n edges, there are 2n total degrees from all of G's vertices&quot; for all n &gt; 1.</p>
+<h3 id="basis-step-p-1">Basis Step: P(1)</h3>
+<p>A graph with n=1 edges has has 2 vertices by the definition of an edge. Each vertex has a degree of 1 being the edge, summing up to 2 degrees.</p>
+<h3 id="inductive-step-assume-p-k-is-true">Inductive Step: Assume P(k) is true</h3>
+<p>Assume P(1) .... P(k) are true for some k ≥ 1. </p>
+<h3 id="show-p-k-1-is-true">Show: P(k+1) is true</h3>
+<p>Consider P(k+1) or a simple graph G with k+1 edges. Removing an edge from graph G, provides a graph G' with k edges. By the induction hypotheses a graph with k edges has 2k total degrees. It follows that G has 2k+2 or 2(k+1) total degrees as an edge connects two vertices adding 2 degrees to the total. This completes the induction step.</p>
+<p>Since P(1) is true and the implication P(k)→P(k+1) is true for all integers k ≥ 1, the principle of mathematical induction shows that P(n) is true for all positive integers greater than 1.❏</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

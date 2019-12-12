@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Discrete Concept Map</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+
+      <!-- CSS File -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+      <!-- JS Fle -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+      
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+          console.log("Loaded!");
+          var maths = document.getElementsByClassName("language-math");
+          for (var i=0; i<maths.length; i++) {
+              var el = maths[i];
+              katex.render(el.innerText, el);
+              console.log("rendering math...");
+          }
+        });
+      </script>
+
+
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="https:&#x2F;&#x2F;zola-hyde.netlify.com"><h1>Discrete Concept Map</h1></a>
+                            
+                            <p class="lead">Concepts, explanations, and knowledge for Discrete Mathematics</p>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">The Chinese postman problem</h1>
+  <span class="post-date">2019-12-12</span>
+  <p>Created: Dec 09, 2019 12:57 PM
+Required?: Yes
+Topic: Graphs</p>
+<p><strong>Prerequisites</strong>: ****Euler circuits in graphs and shortest path algorithms. See, for example, Sections 7.5 and 7.6 of Discrete Mathematics and Its Applications, Second Edition, by Kenneth H. Rosen.</p>
+<h1 id="introduction">Introduction</h1>
+<p>Named after the Chinese mathematician Mei-Ko Kwan who posed the problem in 1962.</p>
+<p>The problem is to find a shortest closed path or circuit that visits every edge of an (connected) undirected graph at least once.</p>
+<h2 id="formal-definition">Formal definition</h2>
+<p>Given a connected weighted graph or digraph G, the Chinese Postman Problem is the problem of finding the shortest circuit that uses each edge in G at least once.</p>
+<h2 id="important-property-for-general-solution">Important Property for General Solution</h2>
+<p>Suppose G is a graph with 2k odd vertices, where k ≥ 1, and suppose C is a circuit that traces each edge of G at least once. Then the retraced edges in C can be partitioned into k paths joining pairs of the odd vertices, where each odd vertex in G is an endpoint of exactly one of the paths.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

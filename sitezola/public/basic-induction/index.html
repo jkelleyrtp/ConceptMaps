@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Discrete Concept Map</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;zola-hyde.netlify.com&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+
+      <!-- CSS File -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+      <!-- JS Fle -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+      
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+          console.log("Loaded!");
+          var maths = document.getElementsByClassName("language-math");
+          for (var i=0; i<maths.length; i++) {
+              var el = maths[i];
+              katex.render(el.innerText, el);
+              console.log("rendering math...");
+          }
+        });
+      </script>
+
+
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                            <a href="https:&#x2F;&#x2F;zola-hyde.netlify.com"><h1>Discrete Concept Map</h1></a>
+                            
+                            <p class="lead">Concepts, explanations, and knowledge for Discrete Mathematics</p>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Basic Induction</h1>
+  <span class="post-date">2019-12-12</span>
+  <p>Created: Oct 28, 2019 12:05 PM
+Deadline: Nov 07, 2019
+Name: Richard Gao
+Related to Discrete Problem Database (Tags): ../Discrete%20Problem%20Database/Basic%20Induction%20IQC.md
+Required?: No
+Status: Completed
+Topic: Mathematical Reasoning</p>
+<h1 id="question">Question:</h1>
+<p>Prove by induction that the following equation is true for all n ≥ 1:</p>
+<p>$$\sum_{r=1}^{n}r(n+1) = rac{1}{3}n(n+1)(n+2)$$</p>
+<h1 id="answer">Answer:</h1>
+<p>The above equation is the proposition P(n) for all n ≥ 1. We perform a proof by induction as so.</p>
+<h3 id="basis-step-p-1">Basis Step: P(1)</h3>
+<p>$$\sum_{r=1}^{1}r(r+1) = rac{1}{3}(1)(1+1)(1+2)$$</p>
+<p>$$1(2)=rac{1}{3}(2)(3)$$</p>
+<p>$$2=2$$</p>
+<h3 id="inductive-step-assume-p-k-is-true">Inductive Step: Assume P(k) is true</h3>
+<p>$$\sum_{r=1}^{k}r(r+1) = rac{1}{3}(k)(k+1)(k+2)$$</p>
+<p>$$1(1+1)+2(2+1)+...+k(k+1)=rac{1}{3}(k)(k+1)(k+2)$$</p>
+<h3 id="show-p-k-1-is-true">Show: P(k+1) is true</h3>
+<p>$$\sum_{r=1}^{k+1}r(r+1) = rac{1}{3}(k+1)(k+1+1)(k+1+2)$$</p>
+<p>$$1(1+1)+2(2+1)+...+k(k+1)+(k+1)(k+1+1)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<p>Substitute in definition of P(k)</p>
+<p>$$rac{1}{3}(k)(k+1)(k+2)+(k+1)(k+2)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<p>Factor out</p>
+<p>$$(rac{1}{3}(k+1)(k+2))(k+3)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<p>By associative property of multiplication</p>
+<p>$$rac{1}{3}(k+1)(k+2)(k+3)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<p>Since P(1) is true and the implication P(k)→P(k+1) is true for all integers k ≥ 1, the principle of mathematical induction shows that P(n) is true for all positive integers greater than 1.❏</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>
