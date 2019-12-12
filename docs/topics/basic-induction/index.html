@@ -81,25 +81,25 @@ Status: Completed
 Topic: Mathematical Reasoning</p>
 <h1 id="question">Question:</h1>
 <p>Prove by induction that the following equation is true for all n ≥ 1:</p>
-<p>$$\sum_{r=1}^{n}r(n+1) = rac{1}{3}n(n+1)(n+2)$$</p>
+<pre><code class="language-math">\sum_{r=1}^{n}r(n+1) = rac{1}{3}n(n+1)(n+2)</code></pre>
 <h1 id="answer">Answer:</h1>
 <p>The above equation is the proposition P(n) for all n ≥ 1. We perform a proof by induction as so.</p>
 <h3 id="basis-step-p-1">Basis Step: P(1)</h3>
-<p>$$\sum_{r=1}^{1}r(r+1) = rac{1}{3}(1)(1+1)(1+2)$$</p>
-<p>$$1(2)=rac{1}{3}(2)(3)$$</p>
-<p>$$2=2$$</p>
+<pre><code class="language-math">\sum_{r=1}^{1}r(r+1) = rac{1}{3}(1)(1+1)(1+2)</code></pre>
+<pre><code class="language-math">1(2)=rac{1}{3}(2)(3)</code></pre>
+<pre><code class="language-math">2=2</code></pre>
 <h3 id="inductive-step-assume-p-k-is-true">Inductive Step: Assume P(k) is true</h3>
-<p>$$\sum_{r=1}^{k}r(r+1) = rac{1}{3}(k)(k+1)(k+2)$$</p>
-<p>$$1(1+1)+2(2+1)+...+k(k+1)=rac{1}{3}(k)(k+1)(k+2)$$</p>
+<pre><code class="language-math">\sum_{r=1}^{k}r(r+1) = rac{1}{3}(k)(k+1)(k+2)</code></pre>
+<pre><code class="language-math">1(1+1)+2(2+1)+...+k(k+1)=rac{1}{3}(k)(k+1)(k+2)</code></pre>
 <h3 id="show-p-k-1-is-true">Show: P(k+1) is true</h3>
-<p>$$\sum_{r=1}^{k+1}r(r+1) = rac{1}{3}(k+1)(k+1+1)(k+1+2)$$</p>
-<p>$$1(1+1)+2(2+1)+...+k(k+1)+(k+1)(k+1+1)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<pre><code class="language-math">\sum_{r=1}^{k+1}r(r+1) = rac{1}{3}(k+1)(k+1+1)(k+1+2)</code></pre>
+<pre><code class="language-math">1(1+1)+2(2+1)+...+k(k+1)+(k+1)(k+1+1)=rac{1}{3}(k+1)(k+2)(k+3)</code></pre>
 <p>Substitute in definition of P(k)</p>
-<p>$$rac{1}{3}(k)(k+1)(k+2)+(k+1)(k+2)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<pre><code class="language-math">rac{1}{3}(k)(k+1)(k+2)+(k+1)(k+2)=rac{1}{3}(k+1)(k+2)(k+3)</code></pre>
 <p>Factor out</p>
-<p>$$(rac{1}{3}(k+1)(k+2))(k+3)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<pre><code class="language-math">(rac{1}{3}(k+1)(k+2))(k+3)=rac{1}{3}(k+1)(k+2)(k+3)</code></pre>
 <p>By associative property of multiplication</p>
-<p>$$rac{1}{3}(k+1)(k+2)(k+3)=rac{1}{3}(k+1)(k+2)(k+3)$$</p>
+<pre><code class="language-math">rac{1}{3}(k+1)(k+2)(k+3)=rac{1}{3}(k+1)(k+2)(k+3)</code></pre>
 <p>Since P(1) is true and the implication P(k)→P(k+1) is true for all integers k ≥ 1, the principle of mathematical induction shows that P(n) is true for all positive integers greater than 1.❏</p>
 
 </div>

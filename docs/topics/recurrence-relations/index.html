@@ -90,7 +90,7 @@ Topic: Advanced Counting</p>
 <li>Fill the first n - 3 feet and then add a elephant at the end. There are a_n-3 ways to do this.</li>
 </ol>
 <p>Using the sum rule, we arrive at:</p>
-<p>$$a_n = a_{n-1} + a_{n-2} + a_{n-3}, \ n\geq4, a_1=1, a_2=3,a_3=9$$</p>
+<pre><code class="language-math">a_n = a_{n-1} + a_{n-2} + a_{n-3}, \ n\geq4, a_1=1, a_2=3,a_3=9</code></pre>
 <p>The initial conditions are as such because with a:</p>
 <ul>
 <li>1 foot line, there can be a baboon →1 way</li>
@@ -98,7 +98,7 @@ Topic: Advanced Counting</p>
 <li>3 feet line, there can be 3! ways to have a line of just baboons, 2! ways to have a line of one baboon and one zebra, and 1! ways to have a lone of a single elephant. Adding this up we arrive at 9 ways.</li>
 </ul>
 <p>The first 8 terms are then:</p>
-<p>$$a_1=1,\a_2=3,\a_3=9,\a_4=13,\a_5=25,\a_6=47,\a_7=85,\a_8=157$$</p>
+<pre><code class="language-math">a_1=1,\a_2=3,\a_3=9,\a_4=13,\a_5=25,\a_6=47,\a_7=85,\a_8=157</code></pre>
 <h3 id="remark">Remark:</h3>
 <p>For some time I was stuck thinking about how if we were to add a baboon to the end of a_n-1, how will we account to the sequence where a baboon starts and then a_n-1 follows. However, I came to the realization that through the recurrence relation, this and similar cases are taken care of through the mutually and exhaustive cases of a_n-2 and a_n-3.</p>
 <h1 id="question-1">Question:</h1>
@@ -132,9 +132,9 @@ Topic: Advanced Counting</p>
 <li>If a trip starts with HHX, this does not affect whether or not the trip has 3 consecutive hot air balloon days. There are then n-2 remaining slots to fill such that they do not contain 3 consecutive hot air balloon days. Therefore, there are d_n-3 possible ways to plan the rest of the trip.</li>
 </ul>
 <p>However, before adding up these mutually exclusive and exhaustive cases to arrive at our recurrence relation we realize that because X is a placeholder variable of a set with three elements, we must multiply each of the cases by 3, as there are 3 instances of each case: one for J, one for W, and one for B. Our RR is then:</p>
-<p>$$d_n=3d_{n-1}+3d_{n-2}+3d_{n-3}, \ n\ge4, d_1=4,d_2=16,d_3=63$$</p>
+<pre><code class="language-math">d_n=3d_{n-1}+3d_{n-2}+3d_{n-3}, \ n\ge4, d_1=4,d_2=16,d_3=63</code></pre>
 <p>The first 8 terms are then:</p>
-<p>$$a_1=4,\a_2=16,\a_3=63,\a_4=249,\a_5=984,\a_6=3888,\a_7=15363,\a_8=60705$$</p>
+<pre><code class="language-math">a_1=4,\a_2=16,\a_3=63,\a_4=249,\a_5=984,\a_6=3888,\a_7=15363,\a_8=60705</code></pre>
 
 </div>
 

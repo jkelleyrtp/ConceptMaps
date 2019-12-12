@@ -101,24 +101,24 @@ terms, using computational power to iterate through your RR if you wish.</p>
  		return solve_from_n(n - 2) + solve_from_n(n-2) + solve_from_n(n-1)
 </code></pre>
 <p>From this recursive function, we see that a_n is simply:</p>
-<p>$$a_n = 2a_{n-2} + a_{n-1}$$</p>
+<pre><code class="language-math">a_n = 2a_{n-2} + a_{n-1}</code></pre>
 <p>Our first 8 numbers sequence </p>
 <p>1, 3, 5, 11, 21, 43, 85, 171</p>
 <p>With initial conditions </p>
-<p>$$a_1 = 1, a_2 = 3 	ag{1}$$</p>
-<p>$$a_n = a_{n-1} + 2a_{n-2} 	ag{2}$$</p>
+<pre><code class="language-math">a_1 = 1, a_2 = 3 	ag{1}</code></pre>
+<pre><code class="language-math">a_n = a_{n-1} + 2a_{n-2} 	ag{2}</code></pre>
 </li>
 <li>
 <p>(b) Using your above RR (which you may now take as fact), prove by induction that the number of ways to fill an n inch Lego line with the given Legos is also given by the 1n+1 1 n 1n+1 1 n
 closed-form solution 3 2 + 3 (−1) . In other words, prove that an = 3 2 + 3 (−1) ,</p>
 <p>Let </p>
-<p>$$P(n) = &quot; a_n = rac{1}{3}2^{n+1} + rac{1}{3}(-1)^n&quot; 	ext{ for all } n \ge 3$$</p>
+<pre><code class="language-math">P(n) = &quot; a_n = rac{1}{3}2^{n+1} + rac{1}{3}(-1)^n&quot; 	ext{ for all } n \ge 3</code></pre>
 <p>Base case: n = 3, because the RR theorem requires n-1 and n-2. The RR says that </p>
-<p>$$a_3 = 3 + 2*1 = 5$$</p>
+<pre><code class="language-math">a_3 = 3 + 2*1 = 5</code></pre>
 <p>and the P(3) proposition says that this should be equal to </p>
-<p>$$rac{1}{3} 2^4 + rac{1}{3}(-1)^3 = 5$$</p>
+<pre><code class="language-math">rac{1}{3} 2^4 + rac{1}{3}(-1)^3 = 5</code></pre>
 <p>Suppose P(3) ... P(k) hold for some k≥2. (This is allowed because we showed it works for k = 2). Consider P (k + 1); we wish to show </p>
-<p>$$a_{n + 1} = rac{1}{3}2^{n+2} + rac{1}{3}(-1)^{n+1}$$</p>
+<pre><code class="language-math">a_{n + 1} = rac{1}{3}2^{n+2} + rac{1}{3}(-1)^{n+1}</code></pre>
 <p>If a_n is 1, and a_n + 1 is 3, so:</p>
 </li>
 </ol>
